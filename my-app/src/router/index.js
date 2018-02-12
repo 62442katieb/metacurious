@@ -1,0 +1,39 @@
+import Vue from 'vue';
+import Router from 'vue-router';
+import About from '@/components/About';
+import Home from '@/components/Home';
+import Profile from '@/components/Profile';
+import Coins from '@/components/Coins';
+import Contact from '@/components/Contact';
+
+Vue.use(Router);
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home,
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About,
+    },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile,
+    },
+    {
+      path: '/coins/:pmid',
+      name: 'Coins',
+      component: Coins,
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact,
+    }
+  ],
+});
